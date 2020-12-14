@@ -20,9 +20,11 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
+      "extends": ["plugin:@nrwl/nx/typescript", "airbnb-typescript"],
       "parserOptions": { "project": "./tsconfig.*?.json" },
-      "rules": {}
+      "rules": {
+        "react/jsx-props-no-spreading": 0
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
