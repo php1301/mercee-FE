@@ -1,0 +1,19 @@
+{
+    "env": {
+      "GOOGLE_SPREADSHEET_ID_PRODUCT": "your_google_spreadsheet_id_for_product_here",
+      "GOOGLE_SPREADSHEET_ID_ORDER": "your_google_spreadsheet_id_for_order_here",
+      "GOOGLE_SPREADSHEET_ID_CATEGORY": "your_google_spreadsheet_id_for_category_here",
+      "GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL": "your_google_service_account_client_email_here",
+      "GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY": "your_google_service_account_private_key_here"
+    },
+    "build": {
+      "env": {
+        "GOOGLE_SPREADSHEET_ID_PRODUCT": "your_google_spreadsheet_id_for_product_here",
+        "GOOGLE_SPREADSHEET_ID_ORDER": "your_google_spreadsheet_id_for_order_here",
+        "GOOGLE_SPREADSHEET_ID_CATEGORY": "your_google_spreadsheet_id_for_category_here",
+        "GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL": "your_google_service_account_client_email_here",
+        "GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY": "your_google_service_account_private_key_here"
+      }
+    }
+  }
+  

@@ -9,7 +9,11 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "baseUrl": "src",
+    "paths": {
+      "@public/*": ["public/*"],
+    },
   },
   "files": [],
   "include": [],
