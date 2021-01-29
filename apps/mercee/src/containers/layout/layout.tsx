@@ -1,5 +1,5 @@
 import Header from './header';
-// import Footer from './footer';
+import Footer from './footer';
 // import { Drawer, CartDrawer } from 'containers/drawer/drawer.provider';
 
 const Layout = (props) => {
@@ -15,13 +15,13 @@ const Layout = (props) => {
     >
       {/* <Drawer /> */}
       <Header />
-      {/* <div className="flex flex-col w-full h-full flex-grow">
-      <div className="pt-90px px-3 pb-50px flex-auto md:px-35px">
-        {children}
+      <div className="flex flex-col w-full flex-grow h-full">
+        <div className="pt-90px flex-auto pb-50px md:px-35px">
+          {children}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-    <CartDrawer /> */}
+      {/* <CartDrawer /> */}
     </main>
   );
 };
