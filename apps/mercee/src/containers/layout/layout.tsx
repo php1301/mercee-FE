@@ -1,8 +1,11 @@
+import { Drawer, CartDrawer } from 'containers/drawer/drawer';
 import Header from './header';
 import Footer from './footer';
-// import { Drawer, CartDrawer } from 'containers/drawer/drawer.provider';
 
-const Layout = (props) => {
+type LayoutProps = {
+  style: any;
+};
+const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
   const { style, children } = props;
   return (
     <main
@@ -13,7 +16,7 @@ const Layout = (props) => {
         ...style,
       }}
     >
-      {/* <Drawer /> */}
+      <Drawer />
       <Header />
       <div className="flex flex-col w-full flex-grow h-full">
         <div className="pt-90px flex-auto pb-50px md:px-35px">
@@ -21,7 +24,7 @@ const Layout = (props) => {
         </div>
         <Footer />
       </div>
-      {/* <CartDrawer /> */}
+      <CartDrawer />
     </main>
   );
 };
