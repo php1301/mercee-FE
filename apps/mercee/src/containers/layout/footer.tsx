@@ -62,7 +62,7 @@ const Footer = () => (
         className="font-semibold transition-colors duration-200 ease-in-out hover:text-red-700"
         href="https://redq.io/"
       >
-        ohp1301
+        php1301
       </a>
       {' '}
       All rights reserved
