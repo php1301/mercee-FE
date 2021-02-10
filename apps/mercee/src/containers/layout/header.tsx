@@ -6,10 +6,10 @@ import Logo from 'assets/icons/logo';
 import Search from 'components/search';
 import { DrawerContext } from 'contexts/drawer/drawer.provider';
 import { useCart } from 'contexts/cart/cart.provider';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
 export default function Header() {
-  const router = useRouter();
+  // const router = useRouter();
   const { dispatch } = useContext(DrawerContext);
   const { itemsCount } = useCart();
 
@@ -37,7 +37,7 @@ export default function Header() {
     });
   };
 
-  const isHome = router.pathname === '/';
+  // const isHome = router.pathname === '/';
 
   return (
     <header className="flex items-center shadow-mobile text-gray-700 body-font fixed bg-white w-full h-90px z-20 lg:shadow-header pr-20px md:pr-30px lg:pr-40px">
