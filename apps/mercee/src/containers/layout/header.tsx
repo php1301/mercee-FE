@@ -68,7 +68,7 @@ export default function Header() {
 
       <div className="hidden items-center text-gray-900 mr-10 flex-shrink-0 lg:flex">
         <PhoneIcon />
-        <span className="font-semibold text-base text-14px ml-3">
+        <span className="font-semibold text-14px ml-3">
           +84 888-700-140
         </span>
       </div>
@@ -81,8 +81,8 @@ export default function Header() {
       >
         <CartIcon width="20px" height="20px" />
         <span
-          className="w-18px h-18px flex items-center justify-center bg-gray-900 text-white absolute rounded-full"
-          style={{ fontSize: '10px', top: '-10px', right: '-10px' }}
+          className="flex w-18px h-18px rounded-full absolute items-center justify-center bg-gray-900 text-white -top-10px -right-10px text-10px"
+          style={{ fontSize: '10px' }}
         >
           {itemsCount}
         </span>
