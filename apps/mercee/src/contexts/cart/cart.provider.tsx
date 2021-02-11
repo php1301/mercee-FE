@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useReducer, useContext, createContext } from 'react';
-import { useStorage } from 'helpers/use-storage';
+import { useStorage } from 'hooks/useStorage';
 import { reducer, cartItemsTotalPrice } from './cart.reducer';
 
 const CartContext = createContext({} as any);

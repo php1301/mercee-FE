@@ -1,15 +1,15 @@
 import { useState, useCallback, useLayoutEffect } from 'react';
-import debounce from './debounce'; // maybe use a hook instead?
+import debounce from 'helpers/debounce'; // maybe use a hook instead?
 
 function useDimensions(
   liveMeasure = true,
   delay = 250,
-  initialDimensions = {}
+  initialDimensions = {},
 ) {
   const [dimensions, setDimensions] = useState(initialDimensions);
   const [node, setNode] = useState(null);
 
-  const ref = useCallback(newNode => {
+  const ref = useCallback((newNode) => {
     setNode(newNode);
   }, []);
 
