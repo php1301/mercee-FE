@@ -5,7 +5,7 @@ import { DrawerContext } from 'contexts/drawer/drawer.provider';
 import CartItem from 'components/cart-item';
 import Button from 'components/button';
 import ArrowLeft from 'assets/icons/arrow-left';
-import { CURRENCY } from 'helpers/constants';
+import { CURRENCY } from 'settings/constants';
 import NoItem from './no-item';
 
 export default function Cart() {

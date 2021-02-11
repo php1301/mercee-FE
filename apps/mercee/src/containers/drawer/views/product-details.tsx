@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Scrollbar from 'components/scrollbar';
 import Button from 'components/button';
-import { CURRENCY } from 'helpers/constants';
+import { CURRENCY } from 'settings/constants';
 import { useCart } from 'contexts/cart/cart.provider';
 import { DrawerContext } from 'contexts/drawer/drawer.provider';
 import ArrowLeft from 'assets/icons/arrow-left';

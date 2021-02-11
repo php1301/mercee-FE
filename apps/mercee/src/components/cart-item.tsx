@@ -1,4 +1,4 @@
-import { CURRENCY } from 'helpers/constants';
+import { CURRENCY } from 'settings/constants';
 import { useCart } from 'contexts/cart/cart.provider';
 import Counter from './counter';
 import {
