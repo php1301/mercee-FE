@@ -146,6 +146,19 @@ export const CarouselItemBase = 'overflow-hidden w-full flex rounded overflow-hi
 
 export const CarouselItemImage = 'w-full h-full object-cover';
 
+// ---------------
+// Hero Carousel
+// ---------------
+export const NavButtonGroupBase = 'flex items-center absolute top-half w-full';
+
+export const NavArrowButtonBase = 'w-30px h-30px flex items-center justify-center rounded-full text-gray-900 bg-white shadow-float absolute transition duration-250 hover:bg-gray-900 hover:text-white focus:outline-none';
+
+export const NavPrevButtonRadius = 'left-0 ml-10px md:ml-35px ';
+
+export const NavNextButtonRadius = 'right-0 mr-10px md:mr-35px';
+
+export const HeroCarouselBase = 'w-full flex items-center bg-cover px-40px md:px-60px lg:px-100px h-480px lg:h-400px xl:h-480px 2xxl:h-650px';
+
 // ------------
 // Testimonial
 // ------------
