@@ -101,6 +101,7 @@ module.exports = {
         '20px': '20px',
         '30px': '30px',
         '35px': '35px',
+        // '-35px': '-35px', // ko co padding < 0
         '40px': '40px',
         '45px': '45px',
         '50px': '50px',
@@ -120,6 +121,9 @@ module.exports = {
         '580px': '580px',
         '650px': '650px',
         '1440px': '1440px',
+      },
+      margin: {
+        '-35': '-35px',
       },
       inset: {
         8: '2rem',
