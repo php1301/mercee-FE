@@ -9,20 +9,20 @@ import { DrawerProvider } from 'contexts/drawer/drawer.provider';
 import { SearchProvider } from 'contexts/search/use-search';
 import 'typeface-open-sans';
 import Layout from 'containers/layout/layout';
-// import { CategoryProvider } from 'contexts/category/use-category';
+import { CategoryProvider } from 'contexts/category/category.provider';
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <SearchProvider>
-      {/* <CategoryProvider> */}
-      <DrawerProvider>
-        <CartProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </CartProvider>
-      </DrawerProvider>
-      {/* </CategoryProvider> */}
+      <CategoryProvider>
+        <DrawerProvider>
+          <CartProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </CartProvider>
+        </DrawerProvider>
+      </CategoryProvider>
     </SearchProvider>
   );
 }
