@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import SEO from 'components/seo';
 import Highlight from 'containers/highlight';
-import HowItWork from 'containers/how-it-work';
+import HowItWorks from 'containers/how-it-works';
 // import Categories from 'containers/categories';
 // import Products from 'containers/products';
 import CallToAction from 'containers/call-to-action';
@@ -34,7 +34,7 @@ const Index: NextPage = () => {
         description="Checkout Details"
       />
       <Highlight />
-      <HowItWork />
+      <HowItWorks />
       <CallToAction />
     </>
   );
