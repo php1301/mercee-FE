@@ -8,6 +8,13 @@ import furnitureImage from 'assets/images/banner/furniture.png';
 import medicineImage from 'assets/images/banner/medicine.png';
 
 export const sitePages = {
+  terms: {
+    page_title: 'Terms & Condition',
+    page_description: 'Terms & Condition',
+    banner_title_id: 'groceriesTitle',
+    banner_description_id: 'groceriesSubTitle',
+    banner_image_url: groceryImage,
+  },
   grocery: {
     page_title: 'Grocery - PickBazar',
     page_description: 'Grocery Details',
