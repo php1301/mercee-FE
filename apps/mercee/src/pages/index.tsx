@@ -1,22 +1,32 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import SEO from 'components/seo';
 import Highlight from 'containers/highlight';
-import Banner from 'containers/banner/banner';
+import HowItWork from 'containers/how-it-work';
+// import Categories from 'containers/categories';
 // import Products from 'containers/products';
-// import CallToAction from 'containers/call-to-action';
-// import HowItWorks from 'containers/how-it-works';
-// import { useRefScroll } from 'helpers/use-ref-scroll';
+import CallToAction from 'containers/call-to-action';
+import { useRefScroll } from 'hooks/use-ref-scroll';
 import { useSearch } from 'contexts/search/use-search';
+import { useCategory } from 'contexts/category/category.provider';
 // import { getProducts } from 'helpers/get-products';
 // import { getCategories } from 'helpers/get-categories';
-// import Categories from 'containers/categories';
-// import { useCategory } from 'contexts/category/use-category';
-import styles from './index.module.css';
 
 const Index: NextPage = () => {
+  // Scroll Observer
+  const { elRef, scroll } = useRefScroll({
+    percentOfElement: 0,
+    percentOfContainer: 0,
+    offsetPX: -100,
+  });
   const { searchTerm } = useSearch();
-  // const { category } = useCategory();
+  const { category } = useCategory();
+  // eslint-disable-next-line consistent-return
+  useEffect(() => {
+    if (searchTerm || category) return scroll();
+  }, [searchTerm, category]);
+
   return (
     <>
       <SEO
@@ -24,6 +34,8 @@ const Index: NextPage = () => {
         description="Checkout Details"
       />
       <Highlight />
+      <HowItWork />
+      <CallToAction />
     </>
   );
 };
