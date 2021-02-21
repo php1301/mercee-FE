@@ -110,7 +110,7 @@ export default function Checkout(): React.ReactElement {
               Contact Information
             </span>
             <NumberFormat
-              format="+1 (###) ###-####"
+              format="+84 (###) ###-####"
               mask="_"
               placeholder="Mobile Phone Number"
               className={`${InputBase} ${TextBoxCommonBase} ${TextBoxEnable} mb-15px`}
