@@ -60,7 +60,8 @@ const Footer = () => (
       {' '}
       <a
         className="font-semibold transition-colors duration-200 ease-in-out hover:text-red-700"
-        href="https://redq.io/"
+        href="//github.com/php1301"
+        target="__blank"
       >
         php1301
       </a>
