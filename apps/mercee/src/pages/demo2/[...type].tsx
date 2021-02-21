@@ -17,19 +17,17 @@ const DemoPage: NextPage<Record<string, unknown>> = ({ content }) => {
       <SEO title={page?.page_title} description={page?.page_description} />
       <div style={{ marginTop: '50px' }}>
         <h2>{content}</h2>
-        <h2>Demo Dynamic Routing - Dynamic Routes</h2>
-        <h2>Redirected when access to /demo</h2>
+        <h2>Demo Dynamic Routing - Catch All Routes</h2>
+        <h2>Redirected when access to /demo2</h2>
         <h2>Watch the redirected url when click the Logo</h2>
       </div>
-
-      {/* Nếu không phải catch all routes - có thể test bằng cách đổi tên file
-       cùng tên [type] sẽ bị merge vô
-         /demo/my-post?slug=another */}
+      {/* Catch all routes */}
       <Link
         href={{
-          pathname: '/demo/[type]',
-          query: { type: 'my-post', slug: 'another' },
+          pathname: `/demo2/${content}`,
+          query: { slug: 'my-post', type: 'test' },
         }}
+        // as={`/demo/${content}?slug=mypost`}
       >
         <a>
           <Logo width="100px" id="medsy-menu-logo" />
@@ -57,13 +55,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   console.log('demo');
   return {
-    //   lúc này sẽ có demo/grocery/
     paths: [
-      { params: { type: 'bags' } },
-      { params: { type: 'book' } },
-      { params: { type: 'medicine' } },
-      { params: { type: 'furniture' } },
-      { params: { type: 'clothing' } },
+      // Nếu filename là catch all routes - [...type]
+      { params: { type: ['grocery'] } },
+      { params: { type: ['grocery', 'test'] } },
+      { params: { type: ['makeup'] } },
     ],
     fallback: false, //  // { fallback: false } means other routes should 404.
     // fallback true - sẽ provide 1 page fallback
@@ -75,6 +71,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     // router sẽ có access router.isFallback
     // router.isFallback có thể sử dụng để check có đang load data
     // https://nextjs.org/docs/basic-features/data-fetching#when-is-fallback-true-useful
+
+    // note - fallback true ở page 404 sẽ cho ra 1 page dynamic content khác
+    // Chứ không redirect qua 404 - nhớ check null
   };
 };
 // Easy serverless - JAM stack

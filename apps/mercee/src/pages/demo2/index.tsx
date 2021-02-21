@@ -9,7 +9,7 @@ import Router from 'next/router';
 const IndexPage: React.FC<Record<string, unknown>> = () => {
   // or const IndexPage: React.FC<unknown> = () => {
   useEffect(() => {
-    Router.replace('/demo/[type]', '/demo/bags');
+    Router.replace('/demo2/[...type]', '/demo2/grocery');
   });
   // /page/[page-id].js will match with routes like /page/1 or /page/2, but not /page/1/2
   // /page/[...slug].js will match with routes like /page/1/2, but not /page/
