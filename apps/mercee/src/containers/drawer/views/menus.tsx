@@ -20,25 +20,25 @@ const menus = [
     pathname: '/',
     title: 'Medsy Modern',
   },
-  //   {
-  //     id: 2,
-  //     pathname: 'https://medsy-minimal.vercel.app/',
-  //     title: 'Medsy Minimal',
-  //   },
-  //   {
-  //     id: 3,
-  //     pathname: 'https://medsy-classic.vercel.app/',
-  //     title: 'Medsy Classic',
-  //   },
   {
-    id: 4,
+    id: 2,
     pathname: '/faq',
     title: 'FAQ',
   },
   {
-    id: 5,
+    id: 3,
     pathname: '/terms',
     title: 'Terms & Conditions',
+  },
+  {
+    id: 4,
+    pathname: '/demo/bags',
+    title: 'Demo GetStaticPath & GetStaticProps - Dynamic routing',
+  },
+  {
+    id: 5,
+    pathname: 'demo2/grocery/test',
+    title: 'Demo GetStaticPath & GetStaticProps - Catch all routes routing',
   },
 ];
 
