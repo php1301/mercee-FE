@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable @typescript-eslint/no-var-requires */
 export default async function getProducts() {
-    console.log(process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL)
+    // console.log(process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL)
   if (
     !(
       process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL
